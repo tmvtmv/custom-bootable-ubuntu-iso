@@ -25,7 +25,7 @@ https://www.pugetsystems.com/labs/hpc/ubuntu-22-04-server-autoinstall-iso/?srslt
   - `mkdir extract`
   - `rsync -r isomount/ extract/`<br>
       You can ignore the messages:<br>
-      - "skipping non-regular file "ubuntu"
+      - skipping non-regular file "ubuntu"
       - skipping non-regular file "dists/stable"
       - skipping non-regular file "dists/unstable"
 
