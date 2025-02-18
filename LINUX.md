@@ -1,10 +1,5 @@
 # Create a customized bootable Ubuntu ISO-image on Linux
 
-I ran into some troubles trying to create a customized bootable USB-stick with Ubuntu Server and AutoInstall. Also ChatGPT came up with poor advice. 
-
-This URL was inspirational for me to figure this out, once and for all :-)<br>
-https://www.pugetsystems.com/labs/hpc/ubuntu-22-04-server-autoinstall-iso/?srsltid=AfmBOoq-9UwolUEY0KNx8V7XpmKj1lq5soQFrAoz8Dofk_1q_DLCNgNC
-
 ## Prepare environment for customizations in the original ISO-image
 * Download ISO-file. In this example: ubuntu-24.04.1-live-server-amd64.iso<br>
   `wget https://releases.ubuntu.com/24.04.1/ubuntu-24.04.1-live-server-amd64.iso`
@@ -18,7 +13,7 @@ https://www.pugetsystems.com/labs/hpc/ubuntu-22-04-server-autoinstall-iso/?srslt
   - `mkdir extract`
   - `rsync -r isomount/ extract/`<br>
      You can ignore the messages:<br>
-     - "skipping non-regular file "ubuntu"
+     - skipping non-regular file "ubuntu"
      - skipping non-regular file "dists/stable"
      - skipping non-regular file "dists/unstable"
 
