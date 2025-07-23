@@ -1,11 +1,11 @@
 # Create a customized bootable Ubuntu ISO-image on MacOS
 
 ## Prepare environment for customizations in the original ISO-image
-* Download ISO-file. In this example: ubuntu-24.04.1-live-server-amd64.iso<br>
-  `wget https://releases.ubuntu.com/24.04.1/ubuntu-24.04.1-live-server-amd64.iso`
+* Download ISO-file. In this example: ubuntu-24.04.2-live-server-amd64.iso<br>
+  `wget https://releases.ubuntu.com/24.04.2/ubuntu-24.04.2-live-server-amd64.iso`
 
 * Mount the ISO-file<br>
-  - `hdiutil attach -nomount ubuntu-24.04.1-live-server-amd64.iso`
+  - `hdiutil attach -nomount ubuntu-24.04.2-live-server-amd64.iso`
   - Look at the output, in my case this was:<br>
 
     ```
@@ -14,6 +14,7 @@
     /dev/disk4s2    EFI               
     /dev/disk4s3    Microsoft Basic Data  
     ```
+  - `mkdir isomount`
   - `sudo mount -t cd9660 /dev/disk4 isomount`
 
 * Extract the contents of the ISO-file to the directory `extract`<br>
@@ -40,7 +41,7 @@
 
   ```bash
   #!/bin/bash
-  isofile="ubuntu-24.04.1-live-server-amd64.iso"
+  isofile="ubuntu-24.04.2-live-server-amd64.iso"
   custfile="$(echo ${isofile} | awk -F '.iso' '{print $1}')-CUSTOM.iso"
   
   # Clean-up earlier attemps, just to be sure.
