@@ -50,7 +50,7 @@
   fi
   
   # Construct the cmd-line to be executed to generate the customized, bootable ISO-file
-  MyCmd="xorriso -as mkisofs -r -V 'Ubuntu-Server 24.04.1 - CUSTOM' -o $custfile"
+  MyCmd="xorriso -as mkisofs -r -V 'Ubuntu-Server 24.04.2 - CUSTOM' -o $custfile"
   MyCmd="$MyCmd $(xorriso -indev $isofile -report_el_torito as_mkisofs 2>/dev/null | grep -v "\-V")"
   MyCmd="$MyCmd ./extract/"
   
@@ -71,7 +71,7 @@
   ```bash
   xorriso 1.5.6 : RockRidge filesystem manipulator, libburnia project.
   
-  Drive current: -outdev 'stdio:ubuntu-24.04.1-live-server-amd64-CUSTOM.iso'
+  Drive current: -outdev 'stdio:ubuntu--live-server-amd64-CUSTOM.iso'
   Media current: stdio file, overwriteable
   Media status : is blank
   Media summary: 0 sessions, 0 data blocks, 0 data, 11.3g free
@@ -80,7 +80,7 @@
   Added to ISO image: directory '/'='/home/ubuntu/extract'
   xorriso : UPDATE :    1062 files added in 1 seconds
   xorriso : UPDATE :    1062 files added in 1 seconds
-  xorriso : NOTE : Copying to System Area: 32768 bytes from file '--interval:local_fs:0s-15s:zero_mbrpt,zero_gpt:ubuntu-24.04.1-live-server-amd64.iso'
+  xorriso : NOTE : Copying to System Area: 32768 bytes from file '--interval:local_fs:0s-15s:zero_mbrpt,zero_gpt:ubuntu-24.04.2-live-server-amd64.iso'
   xorriso : UPDATE :  0.67% done
   xorriso : UPDATE :  14.78% done
   xorriso : UPDATE :  28.41% done
@@ -90,10 +90,10 @@
   xorriso : UPDATE :  81.46% done, estimate finish Mon Feb 17 23:04:22 2025
   ISO image produced: 1353976 sectors
   Written to medium : 1353976 sectors at LBA 0
-  Writing to 'stdio:ubuntu-24.04.1-live-server-amd64-CUSTOM.iso' completed successfully.
+  Writing to 'stdio:ubuntu-24.04.2-live-server-amd64-CUSTOM.iso' completed successfully.
   ```
 
 ## Copy the ISO or create a bootable USB-stick
 
-* For example: upload `ubuntu-24.04.1-live-server-amd64-CUSTOM.iso` to your ProxMox server.
+* For example: upload `ubuntu-24.04.2-live-server-amd64-CUSTOM.iso` to your ProxMox server.
 * On MacOS my favorite tool to create USB-sticks from ISO-images is [Balena Etcher](https://etcher.balena.io/).
